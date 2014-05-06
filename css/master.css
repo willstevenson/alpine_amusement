@@ -63,3 +63,20 @@
 	text-align: center;
 	background-color: gray;
 }
+
+.client-comment{
+	color: white;
+}
+
+.carousel-background{
+	background-color:gray;
+}
+
+.paragraph-margin{
+	margin-bottom: 20px;
+	margin-right: 40px;
+	margin-left: 20px;
+}
+
+}
+}
