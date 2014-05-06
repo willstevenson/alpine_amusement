@@ -26,3 +26,27 @@
 .image-wrapper img{
 	margin: 0 auto 20px;
 }
+
+.testimonial-heading {
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+.client-logos{
+	background-color: gray;
+	margin-bottom: 20px;
+	;
+}
+
+.testimonial-logos{
+	margin-top: 20px;
+}
+
+.contact-us{
+	text-align: center;
+}
+
+.galleries-heading{
+	margin-bottom: 40px;
+	margin-top: -10px;
+}
