@@ -4,6 +4,10 @@
 @pattern-dark-green: #031003;
 @bg-dark-green: #001500;
 @bg-light-green: #001b00;
+@light-yellow: #fce16c;
+@yellow: #fccd00;
+@brand-primary: @yellow;
+@white-text: #f1f1f1;
 
 html{
 	background: #001b00; /* Old browsers */
@@ -19,12 +23,70 @@ html{
 
 	// background: transparent url('../images/bg-pattern.png') left top repeat;
 	body{
-		background: transparent url('../images/bg-pattern.png') left top repeat;
+		background: transparent url('../images/bg-pattern.png') left top repeat fixed;
 	}
 }
 
-nav.navbar{
-	margin-bottom: 0;
+.btn{
+	&.btn-primary{
+		color: @bg-dark-green;
+	}
+}
+
+header{
+	padding-top: 40px;
+	// z-index: 4;
+	// position: relative;
+	nav.navbar{
+		margin-bottom: 0;
+		@media(min-width: @grid-float-breakpoint){
+			//desktop nav
+			background: transparent none;
+			.reset-filter();
+			border: none;
+			.navbar-header{
+				// position: relative;
+				// z-index: 5;
+				a.navbar-brand{
+					height: auto;
+					max-width: 200px;
+					padding: 0 15px;
+				}
+			}
+			.navbar-collapse{
+				position: relative;
+				// z-index: 4;
+				// #nav-bg{
+				// 	background: #fff;
+				// 	position: absolute;
+				// 	top: 40px;
+				// 	left: -30px;
+				// 	right: -30px;
+				// 	height: 58px;
+				// 	z-index: -1;
+				// }
+			}
+			.btn.pull-right{
+				margin-right: -15px;
+				margin-top: 38px;
+				// z-index: 2;
+			}
+			.navbar-nav:last-child{
+				position: relative;
+				padding-top: 28px;
+				margin-right: 0;
+				li{
+					a{
+						color: @white-text;
+					}
+				}
+			}
+		}
+		@media(max-width: (@grid-float-breakpoint - 1px)){
+			//mobile nav
+		}
+		
+	}
 }
 
 section#home-banner{
@@ -41,6 +103,9 @@ section#home-banner{
 footer{
 	padding-top: 40px;
 	background-color: #eee;
+	background: transparent none;
+	.reset-filter();
+	border: none;
 }
 
 body section{
