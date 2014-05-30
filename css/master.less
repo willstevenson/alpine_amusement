@@ -34,9 +34,11 @@ html{
 }
 
 header{
-	padding-top: 40px;
-	// z-index: 4;
-	// position: relative;
+	@media(min-width: @grid-float-breakpoint){
+		padding-top: 40px;
+		background: transparent url('../images/chips-top.png') left top no-repeat;
+		min-height: 298px;
+	}
 	nav.navbar{
 		margin-bottom: 0;
 		@media(min-width: @grid-float-breakpoint){
@@ -45,8 +47,6 @@ header{
 			.reset-filter();
 			border: none;
 			.navbar-header{
-				// position: relative;
-				// z-index: 5;
 				a.navbar-brand{
 					height: auto;
 					max-width: 200px;
@@ -55,21 +55,10 @@ header{
 			}
 			.navbar-collapse{
 				position: relative;
-				// z-index: 4;
-				// #nav-bg{
-				// 	background: #fff;
-				// 	position: absolute;
-				// 	top: 40px;
-				// 	left: -30px;
-				// 	right: -30px;
-				// 	height: 58px;
-				// 	z-index: -1;
-				// }
 			}
 			.btn.pull-right{
 				margin-right: -15px;
 				margin-top: 38px;
-				// z-index: 2;
 			}
 			.navbar-nav:last-child{
 				position: relative;
@@ -85,7 +74,11 @@ header{
 		@media(max-width: (@grid-float-breakpoint - 1px)){
 			//mobile nav
 		}
-		
+	}
+	@media(min-width: @grid-float-breakpoint){
+		& + section{
+			margin-top: -158px;
+		}
 	}
 }
 
@@ -96,6 +89,11 @@ section#home-banner{
 		background: transparent;
 		.banner-top{
 			padding-bottom: 20px;
+		}
+		.container{
+			background: fade(#fff, 30%) url('../images/banner.png') right bottom no-repeat;
+			.box-shadow(0 0 12px 4px fade(#fff, 5%));
+			color: @white-text;
 		}
 	}
 }
